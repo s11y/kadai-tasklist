@@ -4,6 +4,9 @@
   <%= f.label :content, 'タスク'%>
   <%= f.text_field :content %>
   
+  <%= f.label :status, 'ステータス'%>
+  <%= f.select :status, ['完了', '未完了']%>
+  
   <%= f.submit '投稿'%>
 <% end %>
 
