@@ -1,13 +1,22 @@
 <h1>タスク新規作成ページ</h1>
 
-<%= form_for(@task) do |f|%>
-  <%= f.label :content, 'タスク'%>
-  <%= f.text_field :content %>
-  
-  <%= f.label :status, 'ステータス'%>
-  <%= f.select :status, ['完了', '未完了']%>
-  
-  <%= f.submit '投稿'%>
+<div class="row">
+  <div class="col-xs-12 col-sm-offset-2 col-md-offset-2 col-sm-8 col-md-8 col-lg-offset-3 col-lg-6">
+    <%= form_for(@task) do |f|%>
+    
+    <div class="form-group">
+      <%= f.label :content, 'タスク'%>
+    <%= f.text_field :content, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :status, 'ステータス'%>
+    <%= f.select :status, ['完了', '未完了'], class: 'form-control' %>
+    </div>
+    
+    <%= f.submit '投稿', class: 'btn btn-primary'%>
 <% end %>
+  </div>
+</div>
 
 <%= link_to '一覧に戻る', tasks_path%>
