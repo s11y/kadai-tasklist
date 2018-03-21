@@ -1,0 +1,12 @@
+<% if logged_in? %>
+  <div class="media">
+    <div class="media-left">
+      <img class="media-object img-rounded" src="<%= gravatar_url(@user, size: 50) %>" alt="">
+    </div>
+    <div class="media-body">
+      <div>
+        <%= @user.name %>
+      </div>
+    </div>
+  </div>
+<% end %>

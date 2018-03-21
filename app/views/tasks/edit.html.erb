@@ -5,9 +5,9 @@
   <%= f.text_field :content %>
   
   <%= f.label :status, 'ステータス'%>
-  <%= f.select :status, ['完了', '未完了']%>
+  <%= f.select :status, ['完了', '未完了'] %>
   
-  <%= f.submit '投稿' %>
+  <%= f.submit '投稿', class: 'btn btn-primary'%>
 <% end %>
 
 <%= link_to '一覧に戻る', tasks_path %>
